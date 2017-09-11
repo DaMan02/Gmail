@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:mContext="info.androidhive.gmail.activity.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <!--
+* Behavior is a parameter of the CoordinatorLayout.LayoutParams.
+ You can set the behavior on an instance of CoordinatorLayout.
+ LayoutParams with setBehavior method.
+To get a proper Behavior object that represents the same thing as
+ @string/appbar_scrolling_view_behavior you should create an instance
+ of AppBarLayout.ScrollingViewBehavior.
+ * tools:showIn==This attribute allows you to point to a layout that uses this layout as an include,
+ so you can preview (and edit) this file as it appears while embedded in its
+  parent layout.-->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>
